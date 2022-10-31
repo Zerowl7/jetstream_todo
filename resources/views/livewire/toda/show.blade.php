@@ -10,7 +10,7 @@
         <tbody>
             @foreach ($list as $object)
                 <tr @if ($loop->even) class="bg-grey" @endif>
-                    <td class="border px- py-2">{{ $object->description }}</td>
+                    <td class="border px-4 py-2">{{ $object->description }}</td>
                     <td class="border px-4 py-2">
                         @if ($object->done)
                             Done
@@ -22,7 +22,7 @@
                     <td class="border px-12 py-2 items-center">
                         @if ($object->done)
                             <button wire:click="markAsToDo({{ $object->id }})"
-                                class="bg-red-100 text-red-600 px-6 rounded-full ">
+                                class="bg-red-100 text-red-600 px-6 rounded-full ml-12 ">
                                 Mark as "To Do"
                             </button>
                         @else
